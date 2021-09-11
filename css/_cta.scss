@@ -1,0 +1,29 @@
+.aside {
+    @include flex(column, center);
+    position: relative;
+    bottom: -3.5rem;
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: .9rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 3rem;
+    background-color: white;
+    h2 {
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    button {
+        margin-bottom: 0;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .aside {
+        width: 50vw;
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+}

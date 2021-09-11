@@ -1,0 +1,114 @@
+footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 6rem 3rem;
+    background-color: $ColorVeryDarkCyan;
+    a {
+        color: $ColorVeryPaleCyan;
+        text-decoration: none;
+        font-size: .8rem;
+        text-align: left;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+    .header {
+        margin-right: 5rem;
+        p {
+            color: $ColorVeryPaleCyan;
+            font-size: .7rem;
+            text-align: left;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+        }
+        .location {
+            &::before {
+                content: url(../images/icon-location.svg);
+                margin-right: .7rem;
+            }
+        }
+        .phone {
+            &::before {
+                content: url(../images/icon-phone.svg);
+                margin-right: .7rem;
+            }
+        }
+        .email {
+            &::before {
+                content: url(../images/icon-email.svg);
+                margin-right: .7rem;
+            }
+        }
+        img {
+            width: 50%;
+            margin-bottom: 1rem;
+        }
+        @include flex(column, center);
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .footer-link1 {
+        @include flex(column, center);
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .footer-link2 {
+        @include flex(column, center);
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: .8rem;
+    }
+    .footer-social {
+        .social-link {
+            @include flex(row, center);
+            align-items: flex-start;
+            margin-top: 4rem;
+            .circle {
+                border: .06rem solid $ColorVeryPaleCyan;
+                border-radius: 50%;
+                color: $ColorVeryPaleCyan;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: .6rem;
+                height: 2.5rem;
+                width: 2.5rem;
+                text-decoration: none;
+            }
+        }
+        .copyright {
+            p {
+                margin-top: 1.8rem;
+                font-size: .7rem;
+                text-align: center;
+                color: $ColorVeryPaleCyan;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        padding: 4rem 3rem;
+        .footer-link1 {
+            margin-top: 2rem;
+        }
+        .footer-link2 {
+            margin-top: 2rem;
+        }
+        .footer-social {
+            .social-link {
+                margin-top: 4rem;
+            }
+            .copyright {
+                p {
+                    margin-top: 8rem;
+                    font-size: .7rem;
+                }
+            }
+        }
+    }
+}

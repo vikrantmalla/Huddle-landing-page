@@ -1,0 +1,81 @@
+header {
+    background-color: $ColorVeryPaleCyan;
+    background-image: url(../images/bg-hero-mobile.svg);
+    background-size: cover;
+    background-position: center center;
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    .navigation-bar {
+        @include flex(row, space-between);
+        padding: 0.3rem 4%;
+        img {
+            width: 30%;
+            margin: 2rem 0 2rem 0;
+        }
+    }
+    .header {
+        @include flex(column, center);
+        margin-top: 4rem;
+        padding: 1.5rem;
+        .header-desc {
+            @include flex(column, center);
+            h1 {
+                text-align: center;
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+                font-family: 'Poppins', sans-serif;
+            }
+            p {
+                text-align: center;
+                font-size: 1rem;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        background-image: url(../images/bg-hero-desktop.svg);
+        margin-bottom: 3.1rem;
+        padding: 2.5rem;
+        .navigation-bar {
+            img {
+                width: 15%;
+                margin: 2rem 0 2rem 0;
+            }
+        }
+        .header {
+            @include flex(row, center);
+            margin-top: 2rem;
+            padding: 1.5rem;
+            .header-desc {
+                @include flex(column, center);
+                align-items: flex-start;
+                padding: 4rem;
+                h1 {
+                    text-align: left;
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    text-align: left;
+                    font-size: 1rem;
+                    margin-bottom: 1.8rem;
+                }
+                .btn-primary {
+                    padding: 1rem 2.5rem;
+                    margin-bottom: 0;
+                }
+            }
+            .header-img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
