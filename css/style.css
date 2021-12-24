@@ -92,6 +92,9 @@ header .header .header-desc p {
     width: 15%;
     margin: 2rem 0 2rem 0;
   }
+  header .navigation-bar .btn:hover {
+    color: #808d99;
+  }
   header .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -141,6 +144,9 @@ header .header .header-desc p {
   header .header .header-desc .btn-primary {
     padding: 1rem 2.5rem;
     margin-bottom: 0;
+  }
+  header .header .header-desc .btn-primary:hover {
+    opacity: .7;
   }
   header .header .header-img img {
     width: 100%;
@@ -287,6 +293,10 @@ header .header .header-desc p {
   padding: 1rem 2rem;
 }
 
+.aside button:hover {
+  opacity: .7;
+}
+
 @media (min-width: 768px) {
   .aside {
     width: 50vw;
@@ -384,6 +394,10 @@ footer .footer-link1 {
   margin-top: 2rem;
 }
 
+footer .footer-link1 a:hover {
+  text-decoration: underline;
+}
+
 footer .footer-link2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -405,6 +419,10 @@ footer .footer-link2 {
   margin-top: .8rem;
 }
 
+footer .footer-link2 a:hover {
+  text-decoration: underline;
+}
+
 footer .footer-social .social-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -413,9 +431,9 @@ footer .footer-social .social-link {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -425,23 +443,32 @@ footer .footer-social .social-link {
   margin-top: 4rem;
 }
 
-footer .footer-social .social-link .circle {
+footer .footer-social .social-link i {
   border: 0.06rem solid #ebfbff;
   border-radius: 50%;
   color: #ebfbff;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: .6rem;
   height: 2.5rem;
   width: 2.5rem;
   text-decoration: none;
+}
+
+footer .footer-social .social-link i:hover {
+  border: 0.06rem solid #ff52bf;
+  color: #ff52bf;
 }
 
 footer .footer-social .copyright p {

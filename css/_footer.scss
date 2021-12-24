@@ -51,29 +51,41 @@ footer {
         align-items: flex-start;
         gap: 1rem;
         margin-top: 2rem;
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     .footer-link2 {
         @include flex(column, center);
         align-items: flex-start;
         gap: 1rem;
         margin-top: .8rem;
+        a {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     .footer-social {
         .social-link {
-            @include flex(row, center);
+            @include flex(row, flex-start);
             align-items: flex-start;
             margin-top: 4rem;
-            .circle {
+            i {
                 border: .06rem solid $ColorVeryPaleCyan;
                 border-radius: 50%;
                 color: $ColorVeryPaleCyan;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
+                @include flex(column, center);
                 margin-right: .6rem;
                 height: 2.5rem;
                 width: 2.5rem;
                 text-decoration: none;
+                &:hover {
+                    border: .06rem solid $ColorPink;
+                    color: $ColorPink;
+                }
             }
         }
         .copyright {

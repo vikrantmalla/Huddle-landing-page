@@ -16,6 +16,9 @@
     button {
         margin-bottom: 0;
         padding: 1rem 2rem;
+        &:hover {
+            opacity: .7;
+        }
     }
 }
 
